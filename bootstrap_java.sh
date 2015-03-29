@@ -9,7 +9,7 @@ pushd $INSTALL_ROOT
   chmod u+x jdk-6u45-linux-x64.bin
   ./jdk-6u45-linux-x64.bin
   rm jdk-6u45-linux-x64.bin
-  for version in 7u71-b14 8u25-b17; do
+  for version in 7u75-b13 8u40-b26; do
       curl -L -b "oraclelicense=a" http://download.oracle.com/otn-pub/java/jdk/$version/jdk-`echo $version | cut -d \- -f 1`-linux-x64.tar.gz -O
       tar xvf jdk-`echo $version | cut -d \- -f 1`-linux-x64.tar.gz
       rm jdk-`echo $version | cut -d \- -f 1`-linux-x64.tar.gz
