@@ -10,7 +10,7 @@ fi
 sudo chown $(whoami): $INSTALL_ROOT
 
 pushd $INSTALL_ROOT
-  for version in 7u75-b13 8u40-b26; do
+  for version in 7u75-b13 8u51-b16; do
       java_pkg=jdk-`echo $version | cut -d \- -f 1`-linux-x64.tar.gz
       if [[ ! -e $java_pkg ]]
       then
@@ -37,4 +37,4 @@ for path in $(ls $INSTALL_ROOT | sort -r); do
 done
 
 ## Java Home
-#[[ -s ${HOME}/.java_home ]] && source ${HOME}/.java_home
+[[ -s ${HOME}/.java_home ]] && source ${HOME}/.java_home
